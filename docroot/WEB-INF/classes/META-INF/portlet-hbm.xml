@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="it.laitspa.usermonitor.model.user_monitor" />
+	<class name="it.laitspa.usermonitor.model.impl.user_monitorImpl" table="user_monitor">
+		<cache usage="read-write" />
+		<id name="recordId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userSurname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userRealName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="remoteIp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dataLogin" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="typeAccess" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="UserMonitorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="DATE" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

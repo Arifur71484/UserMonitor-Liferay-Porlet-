@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="it.laitspa.usermonitor.model.impl.user_monitorModelImpl">
+		<attributes>
+			<id name="recordId" />
+			<basic name="userName" />
+			<basic name="userSurname" />
+			<basic name="userRealName" />
+			<basic name="emailAddress" />
+			<basic name="remoteIp" />
+			<basic name="dataLogin" />
+			<basic name="typeAccess" />
+			<basic name="UserMonitorId" />
+			<basic name="DATE">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="it.laitspa.usermonitor.model.impl.user_monitorImpl" name="user_monitor">
+		<table name="user_monitor" />
+		<attributes />
+	</entity>
+</entity-mappings>

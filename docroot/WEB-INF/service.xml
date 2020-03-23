@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="it.laitspa.usermonitor" auto-namespace-tables="true">
+	<namespace>usrmonitor</namespace>
+	
+	<entity name="user_monitor" local-service="true" remote-service="false" table="user_monitor">
+        <column name="recordId" primary="true" type="long" id-type="increment">  </column>
+        <column name="userName" type="String"></column>
+        <column name="userSurname" type="String"></column>
+        <column name="userRealName" type="String"></column>
+        <column name="emailAddress" type="String"></column>
+        <column name="remoteIp" type="String"></column>
+        <column name="dataLogin" type="String"></column>
+        <column name="typeAccess" type="String"></column>
+        <column name="UserMonitorId" type="long" primary="false" >  </column>
+        <column name="DATE" type="Date"></column>
+        
+        <!-- FINDER -->
+        <finder return-type="Collection" name="BytypeAccess">
+			<finder-column name="typeAccess" comparator="=" />
+		</finder>
+        <finder name="ByDATE" return-type="Collection">
+            <finder-column name="DATE"></finder-column>
+        </finder>
+    </entity>
+    
+</service-builder>

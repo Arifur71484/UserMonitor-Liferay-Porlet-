@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="it.laitspa.usermonitor.service.user_monitorLocalService" class="it.laitspa.usermonitor.service.impl.user_monitorLocalServiceImpl" />
+	<bean id="it.laitspa.usermonitor.service.persistence.user_monitorPersistence" class="it.laitspa.usermonitor.service.persistence.user_monitorPersistenceImpl" parent="basePersistence" />
+</beans>

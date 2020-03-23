@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="it.laitspa.usermonitor.model.user_monitor">
+		<field name="recordId" type="long" />
+		<field name="userName" type="String" />
+		<field name="userSurname" type="String" />
+		<field name="userRealName" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="remoteIp" type="String" />
+		<field name="dataLogin" type="String" />
+		<field name="typeAccess" type="String" />
+		<field name="UserMonitorId" type="long" />
+		<field name="DATE" type="Date" />
+	</model>
+</model-hints>
